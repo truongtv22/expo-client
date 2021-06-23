@@ -18,14 +18,31 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "buildNumber": "1.0.0",
+      "config": {
+        "googleMapsApiKey": "AIzaSyDyUiHgntKm-_c2BrI2Ov54xz6E2jtSxUM"
+      },
+      "supportsTablet": true,
+      "infoPlist": {
+        "UIBackgroundModes": [
+          "location",
+          "fetch"
+        ]
+      },
+      "bundleIdentifier": "vn.thinklabs.expo-dev-client"
     },
     "android": {
+      "package": "vn.thinklabs.expodevclient",
+      "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "vn.thinklabs.expodevclient"
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyDyUiHgntKm-_c2BrI2Ov54xz6E2jtSxUM"
+        }
+      }
     }
   }
 }
