@@ -1,6 +1,7 @@
 import React from 'react';
-import { Text, View, Alert, Button, Linking } from 'react-native';
+import { View, Alert, Button, Linking } from 'react-native';
 
+import * as Location from 'expo-location';
 import * as TaskManager from 'expo-task-manager';
 import * as Notifications from 'expo-notifications';
 import * as BackgroundFetch from 'expo-background-fetch';
@@ -35,7 +36,22 @@ export default function App() {
 
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Hello world !!!</Text>
+      <Button
+        title="Request location permission"
+        onPress={async () => {
+          const { status, scope } = await Location.requestPermissionsAsync();
+          if (status !== 'granted' || scope !== 'always') {
+            Alert.alert(
+              'Quyền truy cập vị trí',
+              'Ứng dụng yêu cầu quyền truy cập vị trí',
+              [
+                { text: 'Huỷ bỏ' },
+                { text: 'Mở Cài đặt', onPress: Linking.openSettings },
+              ],
+            );
+          }
+        }}
+      />
       <Button
         title="Start BackgroundFetch"
         onPress={async () => {
