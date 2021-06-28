@@ -4,7 +4,7 @@ PODS:
   - DoubleConversion (1.1.6)
   - EXApplication (3.2.0):
     - UMCore
-  - EXBackgroundFetch (9.2.1):
+  - EXBackgroundFetch (9.2.2):
     - UMCore
     - UMTaskManagerInterface
   - EXConstants (11.0.1):
@@ -12,7 +12,7 @@ PODS:
     - UMCore
   - EXErrorRecovery (2.2.0):
     - UMCore
-  - EXFileSystem (11.1.1):
+  - EXFileSystem (11.1.3):
     - ExpoModulesCore
     - UMCore
   - EXFont (9.2.1):
@@ -24,11 +24,11 @@ PODS:
     - UMCore
   - EXKeepAwake (9.2.0):
     - UMCore
-  - EXLocation (12.1.1):
+  - EXLocation (12.1.2):
     - ExpoModulesCore
     - UMCore
     - UMTaskManagerInterface
-  - EXNotifications (0.12.1):
+  - EXNotifications (0.12.2):
     - ExpoModulesCore
     - UMCore
   - expo-dev-client (0.3.0):
@@ -77,12 +77,12 @@ PODS:
     - UMCore
   - EXStructuredHeaders (1.1.1):
     - UMCore
-  - EXTaskManager (9.2.1):
+  - EXTaskManager (9.2.2):
     - ExpoModulesCore
     - UMAppLoader
     - UMCore
     - UMTaskManagerInterface
-  - EXUpdates (0.7.2):
+  - EXUpdates (0.7.3):
     - EXStructuredHeaders
     - EXUpdatesInterface
     - React-Core
@@ -341,11 +341,17 @@ PODS:
     - React-cxxreact (= 0.63.4)
     - React-jsi (= 0.63.4)
   - React-jsinspector (0.63.4)
+  - react-native-background-actions (2.6.1):
+    - React-Core
+  - react-native-background-timer (2.4.1):
+    - React-Core
   - react-native-google-maps (0.28.0):
     - Google-Maps-iOS-Utils (= 2.1.0)
     - GoogleMaps (= 3.5.0)
     - React-Core
   - react-native-maps (0.28.0):
+    - React-Core
+  - react-native-safe-area-context (3.2.0):
     - React-Core
   - React-RCTActionSheet (0.63.4):
     - React-Core/RCTActionSheetHeaders (= 0.63.4)
@@ -407,6 +413,8 @@ PODS:
     - React-Core (= 0.63.4)
     - React-cxxreact (= 0.63.4)
     - React-jsi (= 0.63.4)
+  - RNBackgroundFetch (4.0.2):
+    - React-Core
   - RNCAsyncStorage (1.15.5):
     - React-Core
   - RNGestureHandler (1.10.3):
@@ -443,6 +451,8 @@ PODS:
   - RNScreens (3.4.0):
     - React-Core
     - React-RCTImage
+  - RNSVG (12.1.1):
+    - React
   - UMAppLoader (2.2.0)
   - UMCore (7.1.1)
   - UMReactNativeAdapter (6.3.1):
@@ -513,8 +523,11 @@ DEPENDENCIES:
   - React-jsi (from `../node_modules/react-native/ReactCommon/jsi`)
   - React-jsiexecutor (from `../node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
+  - react-native-background-actions (from `../node_modules/react-native-background-actions`)
+  - react-native-background-timer (from `../node_modules/react-native-background-timer`)
   - react-native-google-maps (from `../node_modules/react-native-maps`)
   - react-native-maps (from `../node_modules/react-native-maps`)
+  - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
   - React-RCTActionSheet (from `../node_modules/react-native/Libraries/ActionSheetIOS`)
   - React-RCTAnimation (from `../node_modules/react-native/Libraries/NativeAnimation`)
   - React-RCTBlob (from `../node_modules/react-native/Libraries/Blob`)
@@ -525,10 +538,12 @@ DEPENDENCIES:
   - React-RCTText (from `../node_modules/react-native/Libraries/Text`)
   - React-RCTVibration (from `../node_modules/react-native/Libraries/Vibration`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
+  - RNBackgroundFetch (from `../node_modules/react-native-background-fetch`)
   - "RNCAsyncStorage (from `../node_modules/@react-native-async-storage/async-storage`)"
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
   - RNReanimated (from `../node_modules/react-native-reanimated`)
   - RNScreens (from `../node_modules/react-native-screens`)
+  - RNSVG (from `../node_modules/react-native-svg`)
   - UMAppLoader (from `../node_modules/unimodules-app-loader/ios`)
   - "UMCore (from `../node_modules/@unimodules/core/ios`)"
   - "UMReactNativeAdapter (from `../node_modules/@unimodules/react-native-adapter/ios`)"
@@ -623,10 +638,16 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/jsiexecutor"
   React-jsinspector:
     :path: "../node_modules/react-native/ReactCommon/jsinspector"
+  react-native-background-actions:
+    :path: "../node_modules/react-native-background-actions"
+  react-native-background-timer:
+    :path: "../node_modules/react-native-background-timer"
   react-native-google-maps:
     :path: "../node_modules/react-native-maps"
   react-native-maps:
     :path: "../node_modules/react-native-maps"
+  react-native-safe-area-context:
+    :path: "../node_modules/react-native-safe-area-context"
   React-RCTActionSheet:
     :path: "../node_modules/react-native/Libraries/ActionSheetIOS"
   React-RCTAnimation:
@@ -647,6 +668,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/Libraries/Vibration"
   ReactCommon:
     :path: "../node_modules/react-native/ReactCommon"
+  RNBackgroundFetch:
+    :path: "../node_modules/react-native-background-fetch"
   RNCAsyncStorage:
     :path: "../node_modules/@react-native-async-storage/async-storage"
   RNGestureHandler:
@@ -655,6 +678,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-reanimated"
   RNScreens:
     :path: "../node_modules/react-native-screens"
+  RNSVG:
+    :path: "../node_modules/react-native-svg"
   UMAppLoader:
     :path: "../node_modules/unimodules-app-loader/ios"
   UMCore:
@@ -671,15 +696,15 @@ SPEC CHECKSUMS:
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
   DoubleConversion: cde416483dac037923206447da6e1454df403714
   EXApplication: 9ff2a206009d6e55bca6c20b3f33d07986b51ef3
-  EXBackgroundFetch: 5ec36d4c384ff0417840c67646d9bfc7378343ab
+  EXBackgroundFetch: a4ec08f6f831b350eccb30753f5e3cb4b4b77cb1
   EXConstants: 3babb61f8f4bb7dffe85b8b7d6eaa31d903e4d7e
   EXErrorRecovery: 404d827bc7d42f306c062d58a60b06afc4d082b3
-  EXFileSystem: f0ead0cc264ae2b7a40e56bb7b5526fc3419f50c
+  EXFileSystem: 0a04aba8da751b9ac954065911bcf166503f8267
   EXFont: 9846ba1bb6f5f5aed44e20eea3ac70693323832d
   EXImageLoader: d3531a3fe530b22925c19977cb53bb43e3821fe6
   EXKeepAwake: f4105ef469be7b283f66ce2d7234bb71ac80cd26
-  EXLocation: 3ccd960f9cc591569d61e9363eb098da9da841f6
-  EXNotifications: 05cbc659f40aef6dddaf9c6503d4cc3c270c532d
+  EXLocation: bc7fe9071f65bb5ef6acc13d29a49d57d52c9e64
+  EXNotifications: bfc695a0471dc5a73c17c9b5df919144d4dc2745
   expo-dev-client: 785792b8c8228d7adb8e8a0e7960ea28a254d08b
   expo-dev-launcher: 669533ea784dfeb1cb763a49e436d62db63252c1
   expo-dev-menu: 1c5a5194cb123e6f90358e815711cfea34524d72
@@ -687,8 +712,8 @@ SPEC CHECKSUMS:
   ExpoModulesCore: 2734852616127a6c1fc23012197890a6f3763dc7
   EXSplashScreen: 6bb2fdc0a5f18f5af521308d6dfa17940737dbb5
   EXStructuredHeaders: e52b880264d15b8ad07d36670226c29476af6334
-  EXTaskManager: fc977aebcbd47746e73d49713e80837eec2b1cb1
-  EXUpdates: 88d3247ed1f9371ad69c20023f824192c37ce7e5
+  EXTaskManager: a56d88d245bdd4977b1a92943e8db5b8ed2a5c48
+  EXUpdates: ee7221ebde7f0c62a40c6b6f286e9fbc468e26c2
   EXUpdatesInterface: 8e4f28434a2e6a75803c4ea0ab12cfb07ebb3438
   FBLazyVector: 3bb422f41b18121b71783a905c10e58606f7dc3e
   FBReactNativeSpec: f2c97f2529dd79c083355182cc158c9f98f4bd6e
@@ -715,8 +740,11 @@ SPEC CHECKSUMS:
   React-jsi: a0418934cf48f25b485631deb27c64dc40fb4c31
   React-jsiexecutor: 93bd528844ad21dc07aab1c67cb10abae6df6949
   React-jsinspector: 58aef7155bc9a9683f5b60b35eccea8722a4f53a
+  react-native-background-actions: b973b921d18f35f96bbfb7a2bbbfa32dde3d50a1
+  react-native-background-timer: 17ea5e06803401a379ebf1f20505b793ac44d0fe
   react-native-google-maps: 46dea4aa4acb7300beff508f64d9f8c84e9fb106
   react-native-maps: 2d405b4e8cee0282e4c02bac434d81450dfea877
+  react-native-safe-area-context: f0906bf8bc9835ac9a9d3f97e8bde2a997d8da79
   React-RCTActionSheet: 89a0ca9f4a06c1f93c26067af074ccdce0f40336
   React-RCTAnimation: 1bde3ecc0c104c55df246eda516e0deb03c4e49b
   React-RCTBlob: a97d378b527740cc667e03ebfa183a75231ab0f0
@@ -727,10 +755,12 @@ SPEC CHECKSUMS:
   React-RCTText: 5c51df3f08cb9dedc6e790161195d12bac06101c
   React-RCTVibration: ae4f914cfe8de7d4de95ae1ea6cc8f6315d73d9d
   ReactCommon: 73d79c7039f473b76db6ff7c6b159c478acbbb3b
+  RNBackgroundFetch: 635d82e1e185b235c1fe787f29517507f87450e0
   RNCAsyncStorage: 56a3355a10b5d660c48c6e37325ac85ebfd09885
   RNGestureHandler: a479ebd5ed4221a810967000735517df0d2db211
   RNReanimated: d9da990fc90123f4ffbfdda93d00fc15174863a8
   RNScreens: 21b73c94c9117e1110a79ee0ee80c93ccefed8ce
+  RNSVG: 551acb6562324b1d52a4e0758f7ca0ec234e278f
   UMAppLoader: 21af63390e55c82e037fb9752d93114a80ecf16e
   UMCore: 2f671796d7439604a1cf8ac7bbe5809cd5c50437
   UMReactNativeAdapter: e4531a851dd900fda34b635b28a16085292d7f5b
